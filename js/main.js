@@ -132,7 +132,7 @@ const ModalButton = () => {
     return (React.createElement(React.Fragment, null,
         React.createElement(Button, { type: "primary", onClick: showModal }, "Add.."),
         React.createElement(Modal, { title: "Add Student", visible: isModalVisible, onOk: handleOk, width: 312,
-                onCancel: handleCancel },
+                onCancel: handleCancel, destroyOnClose: true },
             React.createElement(Space, { direction: "vertical" },
                 React.createElement(Input, { placeholder: "Name", id: "newStudentName" }),
                 React.createElement(Checkbox.Group, { name: "newStudentSubject", onChange: handleChange },
