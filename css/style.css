@@ -1,0 +1,14 @@
+@import 'antd/antd.min.css';
+
+.index-input {
+    width: 400px;
+    padding: 24px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
