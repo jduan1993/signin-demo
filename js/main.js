@@ -109,17 +109,13 @@ const ModalButton = () => {
     };
     let subject = '';
     const handleOk = () => {
-        $.ajax({
+        $.post({
             url: 'data/chen/student.json',
             async: false,
-            dataType: 'json',
-            success: function(data) {
-                console.log(data);
-                let name = $('#newStudentName').val();
-                let lesson = $('#newStudentTotalLessons').val();
-                console.log(name);
-                console.log(subject);
-                console.log(lesson);
+            data: {
+                name: $('#newStudentName').val(),
+                subject: subject,
+                lesson: $('#newStudentTotalLessons').val()
             }});
         setIsModalVisible(false);
     };
